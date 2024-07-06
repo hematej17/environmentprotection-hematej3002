@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Conservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('water91.jpg'); /* Add your background image path */
+            background-size: cover;
+            background-position: center;
+            z-index: -2; /* Ensure the image is behind everything */
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the overlay is above the image but behind the content */
+        }
+        header {
+            background-image: url('path-to-your-header-image.jpg'); /* Change to your header background image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 2rem; /* Adjust padding for desired height */
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header .batch-info {
+            position: absolute;
+            bottom: 10px;
+            right: 50px; /* Adjust position */
+            font-size: 1.4rem;
+            color: white;
+            text-align: right;
+        }
+        header .batch-info strong {
+            display: block;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .container {
+            padding: 2rem;
+            margin-bottom: 5rem;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .container h2 {
+            font-size: 2.2rem; /* Increased size of h2 */
+            margin-bottom: 1rem;
+        }
+        .container h3 {
+            font-size: 1.8rem; /* Increased size of h3 */
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .container p {
+            font-size: 1.2rem; /* Increased size of paragraphs */
+            line-height: 1.6;
+        }
+        .container ul {
+            font-size: 1.2rem; /* Increased size of list items */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative; /* Changed from fixed to relative */
+            width: 100%;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        h2, h3 {
+            color: #4CAF50;
+        }
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            height: 300px; /* Fixed height */
+        }
+        .slides {
+            display: none;
+            width: 600px;
+            height: 350px;
+            object-fit: cover; /* Ensures images fit within the given dimensions */
+            margin: auto;
+        }
+        .active {
+            display: block;
+        }
+
+        /* Added styles for the new image carousel */
+        .carousel-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+        .carousel-images {
+            display: none;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .carousel-images.active {
+            display: block;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .dots {
+            text-align: center;
+            padding: 20px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active-dot {
+            background-color: #874f4f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Water Conservation</h1>
+        <div class="batch-info">
+            <strong>AI&DS BATCH-8</strong>
+            <strong>AV.HEMATEJ</strong>
+        </div>
+    </header>
+    <nav>
+        <a href="htmlhomepage.html">Home</a>
+        <a href="wastemanagement.html">Waste Management</a>
+        <a href="waterconservation.html">Water Conservation</a>
+        <a href="treeplantation.html">Tree Plantation</a>
+        <a href="airqualitymanagement.html">Air Quality Management</a>
+        <a href="wildlifeprotection.html">Wildlife Protection</a>
+    </nav>
+    <div class="container">
+        <h2>Introduction to Water Conservation</h2>
+        <div style="text-align:center;">
+            <img src="water100.jpg" alt="Environment Protection" style="height:350px;width:550px">
+        </div>
+        <p>Water conservation involves the careful use and preservation of water resources to ensure their sustainability for future generations. As the global population grows and climate change impacts water availability, it is crucial to adopt water-saving practices and technologies. Effective water conservation reduces the strain on natural water bodies, supports ecosystems, and ensures that clean water is available for all.</p>
+        
+        <h2>Importance of Water Conservation</h2>
+        <p>Water is a finite resource essential for all forms of life. Conserving water helps protect our environment, reduces the energy required for water treatment and distribution, and ensures that we have enough water to meet our current and future needs. By making small changes in our daily lives, we can significantly reduce water wastage and contribute to a more sustainable future.</p>
+        
+        <h2>Consequences of Water Scarcity</h2>
+        <div style="text-align:center;">
+            <img src="water200.jpg" alt="Environment Protection" style="height:300px;width:650px">
+        </div>
+        <p>Water scarcity can have severe consequences for both the environment and human populations:</p>
+        <ul>
+            <li><strong>Environmental Impact:</strong> Reduced water levels in rivers, lakes, and reservoirs can harm ecosystems, leading to loss of biodiversity and habitat degradation.</li>
+            <li><strong>Health Risks:</strong> Limited access to clean water can increase the spread of waterborne diseases and impact hygiene and sanitation practices.</li>
+            <li><strong>Agricultural Challenges:</strong> Water scarcity can reduce crop yields, leading to food shortages and higher food prices.</li>
+            <li><strong>Economic Effects:</strong> Industries that rely heavily on water, such as agriculture and manufacturing, may face operational challenges, leading to economic losses.</li>
+        </ul>
+        
+        <h2>Techniques for Water Conservation</h2>
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <img class="slides active" src="water11.jpg" alt="Image 1">
+            <img class="slides" src="water12.png" alt="Image 2">
+            <img class="slides" src="water13.webp" alt="Image 3">
+            <img class="slides" src="water14.webp" alt="Image 4">
+            <img class="slides" src="water15.webp" alt="Image 5">
+            <img class="slides" src="water16.jpg" alt="Image 6">
+            <img class="slides" src="water17.jpg" alt="Image 7">
+            <img class="slides" src="water18.jpg" alt="Image 8">
+        </div>
+        <h3>Household Techniques</h3>
+        <ul>
+            <li>Fixing leaks in taps and pipes to prevent water wastage.</li>
+            <li>Using water-saving appliances like low-flow toilets and showerheads.</li>
+            <li>Collecting rainwater for gardening and other outdoor uses.</li>
+            <li>Turning off the tap while brushing teeth or washing dishes.</li>
+        </ul>
+        
+        <h3>Agricultural Techniques</h3>
+        <ul>
+            <li>Using drip irrigation systems to water crops efficiently.</li>
+            <li>Planting drought-resistant crop varieties.</li>
+            <li>Practicing rainwater harvesting for irrigation.</li>
+            <li>Implementing soil moisture sensors to optimize watering schedules.</li>
+        </ul>
+        
+        <h3>Industrial Techniques</h3>
+        <ul>
+            <li>Recycling and reusing water in industrial processes.</li>
+            <li>Implementing water-efficient technologies and practices.</li>
+            <li>Treating and purifying wastewater for reuse.</li>
+            <li>Conducting regular water audits to identify and address inefficiencies.</li>
+        </ul>
+        <h2>Benefits of Water Conservation</h2>
+        <ul>
+            <li><strong>Environmental Protection:</strong> Reduces the strain on natural water resources and helps maintain healthy ecosystems.</li>
+            <li><strong>Energy Savings:</strong> Less energy is required to pump, treat, and heat water, reducing greenhouse gas emissions.</li>
+            <li><strong>Economic Savings:</strong> Lower water and energy bills for households, businesses, and communities.</li>
+            <li><strong>Increased Water Availability:</strong> Ensures that water is available for essential uses, such as drinking, agriculture, and industrial processes.</li>
+            <li><strong>Resilience to Drought:</strong> Helps communities better withstand periods of water scarcity.</li>
+        </ul>
+        
+        <h2>How You Can Contribute</h2>
+        <div style="text-align:center;">
+            <img src="water300.jpg" alt="Environment Protection" style="height:400px;width:400px">
+        </div>
+        <ul>
+            <li>Adopt water-saving habits in your daily routine.</li>
+            <li>Educate others about the importance of water conservation.</li>
+            <li>Support policies and initiatives that promote sustainable water use.</li>
+            <li>Participate in community water conservation projects.</li>
+            <li>Encourage businesses and industries to implement water-efficient practices.</li>
+        </ul>
+
+        <!-- Added new carousel for CSP project images -->
+        <h3>Our Activities</h3>
+        <div class="carousel-container">
+            <div class="carousel-slides">
+                <img class="carousel-images active" src="water21.jpg" alt="CSP Project Image 1">
+                <img class="carousel-images" src="water22.jpg" alt="CSP Project Image 2">
+                <img class="carousel-images" src="water23.jpg" alt="CSP Project Image 3">
+                <img class="carousel-images" src="water26.jpg" alt="CSP Project Image 4">
+                <img class="carousel-images" src="water24.jpg" alt="CSP Project Image 5">
+                <img class="carousel-images" src="water25.jpg" alt="CSP Project Image 6">
+                <!-- Add more images as needed -->
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="dots">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <!-- Add more dots as needed -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Environment Protection. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for the first slideshow
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slides");
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 2000); // Change image every 3 seconds
+        }
+
+        showSlides();
+
+        // JavaScript for the new image carousel
+        let carouselIndex = 1;
+        const carouselImages = document.getElementsByClassName("carousel-images");
+        const dots = document.getElementsByClassName("dot");
+
+        function changeSlide(n) {
+            showCarousel(carouselIndex += n);
+        }
+
+        function currentSlide(n) {
+            showCarousel(carouselIndex = n);
+        }
+
+        function showCarousel(n) {
+            if (n > carouselImages.length) { carouselIndex = 1; }
+            if (n < 1) { carouselIndex = carouselImages.length; }
+            for (let i = 0; i < carouselImages.length; i++) {
+                carouselImages[i].classList.remove("active");
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active-dot");
+            }
+            carouselImages[carouselIndex - 1].classList.add("active");
+            dots[carouselIndex - 1].classList.add("active-dot");
+        }
+
+        // Initialize carousel
+        showCarousel(carouselIndex);
+    </script>
+</body>
+</html>
+
