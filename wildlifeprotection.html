@@ -100,8 +100,7 @@
         }
         .carousel-images img {
             min-width: 100%;
-            width: 500px;
-            height: 350px;
+            width: 100%;
         }
         .prev, .next {
             cursor: pointer;
@@ -141,8 +140,7 @@
         }
         .content-with-carousel {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column;
         }
         .content-with-carousel .text-content {
             flex: 1;
@@ -150,12 +148,90 @@
         }
         .slideshow-container {
             position: relative;
-            max-width: 700px;
-            margin-left: 20px; /* Adjust margin as needed */
+            max-width: 600px;
+            margin: auto;
         }
         .slideshow-container img {
-            width: 100%;
+            width: 50%;
             height: auto;
+        }
+        @media (min-width: 576px) {
+            .content-with-carousel {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .content-with-carousel .text-content {
+                padding-right: 20px;
+            }
+            .slideshow-container {
+                margin-left: 20px; /* Adjust margin as needed */
+            }
+        }
+        @media (max-width: 601px) {
+            .container img {
+                width: 100%;
+                height: auto;
+            }
+            .carousel-images img {
+                width: 100%;
+                height: auto;
+            }
+            
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1023px) {
+            .container img {
+                width: 500px;
+                height: 350px;
+            }
+            .carousel-images img {
+                width: 500px;
+                height: 350px;
+            }
+            .slideshow-container img {
+                width: 550px;
+                height: 300px;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container img {
+                width: 500px;
+                height: 350px;
+            }
+            .carousel-images img {
+                width: 500px;
+                height: 350px;
+            }
+            .container img.wild20 {
+                height: 350px;
+                width: 500px;
+            }
+            .container img.wild31 {
+                height: 350px;
+                width: 500px;
+            }
+            .slideshow-container img {
+                width: 550px;
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -178,7 +254,7 @@
     <div class="container">
         <h2>Introduction to Wildlife Protection</h2>
         <div style="text-align:center;">
-            <img src="wild20.jpg" alt="Wildlife Protection" style="height:350px;width:500px">
+            <img class="wild20" src="wild20.jpg" alt="Wildlife Protection">
         </div>
         <p>Wildlife protection involves efforts to safeguard animal species and their habitats from threats such as poaching, habitat destruction, and climate change. Ensuring the survival of wildlife is crucial for maintaining biodiversity and ecological balance.</p>
         <h3>Importance of Wildlife Protection</h3>
@@ -200,7 +276,7 @@
         </ul>
         <h2>Consequences of Wildlife Decline</h2>
         <div style="text-align:center;">
-            <img src="wild31.jpg" alt="Consequences of Wildlife Decline" style="height:350px;width:500px">
+            <img class="wild31" src="wild31.jpg" alt="Consequences of Wildlife Decline">
         </div>
         <p>The decline in wildlife populations leads to significant consequences:</p>
         <ul>
@@ -209,11 +285,20 @@
             <li>Economic loss in sectors like tourism and agriculture.</li>
             <li>Social and cultural impacts on communities that rely on wildlife.</li>
         </ul>
-
-
+        <h2>Conservation Efforts</h2>
         <div class="content-with-carousel">
             <div class="text-content">
-                <h2>Conservation Efforts</h2>
+                <!-- Slideshow Start -->
+            <div class="slideshow-container">
+                <img class="mySlides" src="wild41.jpg" alt="Slideshow Image 1">
+                <img class="mySlides" src="wild42.jpg" alt="Slideshow Image 2">
+                <img class="mySlides" src="wild43.jpg" alt="Slideshow Image 2">
+                <img class="mySlides" src="wild44.jpg" alt="Slideshow Image 2">
+                <img class="mySlides" src="wild45.jpg" alt="Slideshow Image 2">
+                <img class="mySlides" src="wild46.jpg" alt="Slideshow Image 2">
+                <img class="mySlides" src="wild47.jpg" alt="Slideshow Image 2">
+            </div>
+            <!-- Slideshow End -->
                 <p>Various conservation efforts are undertaken to protect wildlife:</p>
                 <ul>
                     <li>Establishment of protected areas and national parks.</li>
@@ -228,21 +313,11 @@
                 <ul>
                     <li>Support and donate to conservation organizations.</li>
                     <li>Adopt sustainable practices and reduce your ecological footprint.</li>
-                    <li>Participate in local conservation projects and volunteer.</li>
-                    <li>Spread awareness about wildlife protection through social media and community events.</li>
+                    <li>Volunteer for local conservation projects.</li>
+                    <li>Raise awareness about wildlife protection in your community.</li>
+                    <li>Avoid products made from endangered species.</li>
                 </ul>
             </div>
-            <!-- Slideshow Start -->
-            <div class="slideshow-container">
-                <img class="mySlides" src="wild41.jpg" alt="Slideshow Image 1">
-                <img class="mySlides" src="wild42.jpg" alt="Slideshow Image 2">
-                <img class="mySlides" src="wild43.jpg" alt="Slideshow Image 2">
-                <img class="mySlides" src="wild44.jpg" alt="Slideshow Image 2">
-                <img class="mySlides" src="wild45.jpg" alt="Slideshow Image 2">
-                <img class="mySlides" src="wild46.jpg" alt="Slideshow Image 2">
-                <img class="mySlides" src="wild47.jpg" alt="Slideshow Image 2">
-            </div>
-            <!-- Slideshow End -->
         </div>
 
         <h2>My Activity</h2>
