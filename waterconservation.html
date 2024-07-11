@@ -18,10 +18,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('water91.jpg'); /* Add your background image path */
+            background-image: url('water91.jpg');
             background-size: cover;
             background-position: center;
-            z-index: -2; /* Ensure the image is behind everything */
+            z-index: -2;
         }
         body::after {
             content: "";
@@ -30,30 +30,33 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Ensure the overlay is above the image but behind the content */
+            z-index: -1;
         }
         header {
-            background-image: url('path-to-your-header-image.jpg'); /* Change to your header background image path */
+            background-image: url('path-to-your-header-image.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 3rem 2rem; /* Adjust padding for desired height */
+            padding: 3rem 2rem;
             text-align: center;
             position: relative;
         }
         header h1 {
             font-size: 2.5rem;
+            background: none; /* Ensure no background color */
         }
         header .batch-info {
             position: absolute;
             bottom: 10px;
-            right: 50px; /* Adjust position */
+            right: 50px;
             font-size: 1.4rem;
             color: white;
             text-align: right;
+            background: none; /* Ensure no background color */
         }
         header .batch-info strong {
             display: block;
+            background: none; /* Ensure no background color */
         }
         nav {
             display: flex;
@@ -72,32 +75,34 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
         .container h2 {
-            font-size: 2.2rem; /* Increased size of h2 */
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
         .container h3 {
-            font-size: 1.8rem; /* Increased size of h3 */
+            font-size: 1.8rem;
             margin-top: 1.5rem;
             margin-bottom: 1rem;
         }
         .container p {
-            font-size: 1.2rem; /* Increased size of paragraphs */
+            font-size: 1.2rem;
             line-height: 1.6;
         }
         .container ul {
-            font-size: 1.2rem; /* Increased size of list items */
+            font-size: 1.2rem;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 1rem;
-            position: relative; /* Changed from fixed to relative */
+            position: relative;
             width: 100%;
         }
         img {
             display: block;
             margin: 0 auto;
+            max-width: 100%;
+            height: auto;
         }
         h2, h3 {
             color: #4CAF50;
@@ -106,29 +111,26 @@
             max-width: 100%;
             position: relative;
             margin: auto;
-            height: 300px; /* Fixed height */
+            height: auto;
         }
         .slides {
             display: none;
-            width: 600px;
-            height: 350px;
-            object-fit: cover; /* Ensures images fit within the given dimensions */
-            margin: auto;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
         .active {
             display: block;
         }
-
-        /* Added styles for the new image carousel */
         .carousel-container {
-            max-width: 600px;
+            max-width: 100%;
             position: relative;
             margin: auto;
         }
         .carousel-images {
             display: none;
             width: 100%;
-            height: 400px;
+            height: auto;
             object-fit: cover;
         }
         .carousel-images.active {
@@ -141,7 +143,7 @@
             width: auto;
             padding: 16px;
             margin-top: -22px;
-            color: white;
+            color: rgb(250, 250, 250);
             font-weight: bold;
             font-size: 18px;
             transition: 0.6s ease;
@@ -153,7 +155,7 @@
             border-radius: 3px 0 0 3px;
         }
         .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(36, 150, 89, 0.8);
         }
         .dots {
             text-align: center;
@@ -172,6 +174,112 @@
         .active-dot {
             background-color: #874f4f;
         }
+        @media (max-width: 600px) {
+            .container img {
+                width: 95%;
+                height: auto;
+            }
+             .container img.water300 {
+                width: 400px;
+                height: auto;
+            }
+            .slides, .carousel-images {
+                width: 100%;
+                max-height: 400px;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 601px) {
+            .container img.water100 {
+                width: 550px;
+                height: 350px;
+            }
+            .container img.water200 {
+                width: 650px;
+                height: 300px;
+            }
+            .container img.water300 {
+                width: 400px;
+                height: 400px;
+            }
+            .slideshow-container {
+                width: 35%; /* Reduce the width */
+                height: auto;
+            }
+            .slides {
+                max-height: 380px; /* Reduce the height */
+            }
+            .carousel-container {
+                max-width: 100%; /* Reduce the width */
+                height: auto;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+    .container img.water100 {
+        width: 500px;
+        height: 280px;
+    }
+    .container img.water200 {
+        width: 550px;
+        height: 280px;
+    }
+    .container img.water300 {
+        width: 400px;
+        height: 380px;
+    }
+    .slideshow-container {
+     width: 550px;
+     height: auto;
+    }
+    .carousel-container {
+        max-width: 500px; /* Adjust the width as needed */
+        height: auto;
+    }
+    .carousel-images {
+        max-height: 350px; /* Adjust the height as needed */
+    }
+    nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+}
+@media (min-width: 1024px) {
+    .container img.water100 {
+        width: 550px;
+        height: 310px;
+    }
+    .container img.water200 {
+        width: 600px;
+        height: 300px;
+    }
+    .container img.water300 {
+        width: 450px;
+        height: 430px;
+    }
+    .slideshow-container {
+     width: 580px;
+     height: auto;
+    }
+    .carousel-container {
+        max-width: 500px; /* Adjust the width as needed */
+        height: auto;
+    }
+    .carousel-images {
+        max-height: 350px; /* Adjust the height as needed */
+    }
     </style>
 </head>
 <body>
@@ -193,7 +301,7 @@
     <div class="container">
         <h2>Introduction to Water Conservation</h2>
         <div style="text-align:center;">
-            <img src="water100.jpg" alt="Environment Protection" style="height:350px;width:550px">
+            <img src="water100.jpg" alt="Environment Protection" class="water100">
         </div>
         <p>Water conservation involves the careful use and preservation of water resources to ensure their sustainability for future generations. As the global population grows and climate change impacts water availability, it is crucial to adopt water-saving practices and technologies. Effective water conservation reduces the strain on natural water bodies, supports ecosystems, and ensures that clean water is available for all.</p>
         
@@ -202,7 +310,7 @@
         
         <h2>Consequences of Water Scarcity</h2>
         <div style="text-align:center;">
-            <img src="water200.jpg" alt="Environment Protection" style="height:300px;width:650px">
+            <img src="water200.jpg" alt="Environment Protection" class="water200">
         </div>
         <p>Water scarcity can have severe consequences for both the environment and human populations:</p>
         <ul>
@@ -211,7 +319,6 @@
             <li><strong>Agricultural Challenges:</strong> Water scarcity can reduce crop yields, leading to food shortages and higher food prices.</li>
             <li><strong>Economic Effects:</strong> Industries that rely heavily on water, such as agriculture and manufacturing, may face operational challenges, leading to economic losses.</li>
         </ul>
-        
         <h2>Techniques for Water Conservation</h2>
         <!-- Slideshow Section -->
         <div class="slideshow-container">
@@ -258,7 +365,7 @@
         
         <h2>How You Can Contribute</h2>
         <div style="text-align:center;">
-            <img src="water300.jpg" alt="Environment Protection" style="height:400px;width:400px">
+            <img src="water300.jpg" alt="Environment Protection" class="water300">
         </div>
         <ul>
             <li>Adopt water-saving habits in your daily routine.</li>
@@ -345,4 +452,5 @@
     </script>
 </body>
 </html>
+
 
