@@ -90,7 +90,7 @@
         }
         .carousel {
             position: relative;
-            max-width: 500px;
+            max-width: 400px;
             margin: auto;
             overflow: hidden;
         }
@@ -100,7 +100,7 @@
         }
         .carousel-images img {
             min-width: 100%;
-            width: 500px;
+            width: 550px;
             height: 350px;
         }
         .prev, .next {
@@ -139,6 +139,78 @@
         .active, .carousel-indicators span:hover {
             background-color: #717171;
         }
+        @media (max-width: 601px) {
+            img.responsive {
+                width: 95%;
+                height: auto;
+            }
+            .carousel-images img {
+                width: 100%;
+                height: auto;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1023px) {
+            img.tree1 {
+                height: 300px;
+                width: 490px;
+            }
+            img.tree100 {
+                height: 300px;
+                width: 500px;
+            }
+            img.tree2 {
+                height: 300px;
+                width: 480px;
+            }
+            img.tree3 {
+                height: 350px;
+                width: 410px;
+            }
+            .carousel-images img {
+                width: 100%;
+                height: auto;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 1024px) {
+            img.tree1 {
+                width: 550px;
+                height: 350px;
+            }
+            img.tree100 {
+                width: 550px;
+                height: 300px;
+            }
+            img.tree2 {
+                width: 550px;
+                height: 350px;
+            }
+            img.tree3 {
+                width: 400px;
+                height: 340px;
+            }
+            .carousel-images img {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -160,7 +232,7 @@
     <div class="container">
         <h2>Introduction</h2>
         <div style="text-align:center;">
-            <img src="tree1.jpg" alt="Environment Protection" style="height:350px;width:500px">
+            <img src="tree1.jpg" alt="Environment Protection" class="responsive tree1">
         </div>
         <p>Tree plantation refers to the process of planting trees in a specific area to improve the environment. It involves selecting appropriate tree species, preparing the site, and providing ongoing care to ensure the trees' growth and survival. Tree plantation is a crucial activity for maintaining ecological balance and enhancing the quality of life on Earth.</p>
         <p>Throughout history, trees have been revered for their life-giving properties. Ancient civilizations planted sacred groves, and in many cultures, trees symbolize life, growth, and connection to nature. Today, tree plantation continues to be a powerful means of environmental stewardship and sustainability.</p>
@@ -176,37 +248,35 @@
             <li>Trees offer shade and cooling, making urban areas more livable.</li>
             <li>They enhance the aesthetic value of an area, offering recreational and psychological benefits.</li>
         </ul>
-    <h2>Consequences of Deforestation</h2>
+        <h2>Consequences of Deforestation</h2>
+        <div style="text-align:center;">
+            <img src="tree100.jpg" alt="Environment Protection" class="responsive tree100">
+        </div>
+        <p>Deforestation, or the large-scale removal of trees, leads to numerous negative consequences:</p>
+        <ul>
+            <li>Loss of habitat for many species, contributing to biodiversity decline.</li>
+            <li>Acceleration of climate change by increasing greenhouse gas concentrations.</li>
+            <li>Disruption of the water cycle, leading to reduced rainfall and increased risk of floods and droughts.</li>
+            <li>Soil erosion and desertification.</li>
+            <li>Severe social and economic repercussions for indigenous communities who depend on forests for their livelihoods.</li>
+            <li>Loss of potential sources for medicine, food, and other resources that forests provide.</li>
+        </ul>
+        <h2>Benefits of Tree Plantation</h2>
+        <p>Tree plantation offers numerous benefits:</p>
+        <div style="text-align:center;">
+            <img src="tree3.png" alt="Environment Protection" class="responsive tree3">
+        </div>
+        <ul>
+            <li>Helps mitigate climate change by absorbing carbon dioxide and reducing greenhouse gas levels.</li>
+            <li>Improves air quality by filtering pollutants and producing oxygen.</li>
+            <li>Provides habitat for a wide range of species, promoting biodiversity.</li>
+            <li>Contributes to water conservation by enhancing groundwater recharge and reducing soil erosion.</li>
+            <li>Offers aesthetic and recreational benefits, making urban areas more attractive and enjoyable for residents.</li>
+            <li>Supports local economies through the production of timber, fruits, nuts, and other non-timber forest products.</li>
+        </ul>
+        <h2>Organic Farming</h2>
     <div style="text-align:center;">
-        <img src="tree100.jpg" alt="Environment Protection" style="height:350px;width:500px">
-    </div>
-    <p>Deforestation, or the large-scale removal of trees, leads to numerous negative consequences:</p>
-    <ul>
-        <li>Loss of habitat for many species, contributing to biodiversity decline.</li>
-        <li>Acceleration of climate change by increasing greenhouse gas concentrations.</li>
-        <li>Disruption of the water cycle, leading to reduced rainfall and increased risk of floods and droughts.</li>
-        <li>Soil erosion and desertification.</li>
-        <li>Severe social and economic repercussions for indigenous communities who depend on forests for their livelihoods.</li>
-        <li>Loss of potential sources for medicine, food, and other resources that forests provide.</li>
-    </ul>
-    
-    <h2>Benefits of Tree Plantation</h2>
-    <p>Tree plantation offers numerous benefits:</p>
-    <div style="text-align:center;">
-        <img src="tree3.png" alt="Environment Protection" style="height:350px;width:400px">
-    </div>
-    <ul>
-        <li>Helps mitigate climate change by absorbing carbon dioxide and reducing greenhouse gas levels.</li>
-        <li>Improves air quality by filtering pollutants and producing oxygen.</li>
-        <li>Provides habitat for a wide range of species, promoting biodiversity.</li>
-        <li>Contributes to water conservation by enhancing groundwater recharge and reducing soil erosion.</li>
-        <li>Offers aesthetic and recreational benefits, making urban areas more attractive and enjoyable for residents.</li>
-        <li>Supports local economies through the production of timber, fruits, nuts, and other non-timber forest products.</li>
-    </ul>
-    
-    <h2>Organic Farming</h2>
-    <div style="text-align:center;">
-        <img src="tree2.jpg" alt="Environment Protection" style="height:350px;width:500px">
+        <img src="tree2.jpg" alt="Environment Protection" class="responsive tree2">
     </div>
     <p>Organic farming is a method of crop and livestock production that involves much more than choosing not to use synthetic pesticides, fertilizers, genetically modified organisms, antibiotics, and growth hormones. Organic farming promotes the use of crop rotations and cover crops and encourages balanced host/predator relationships. Organic residues and nutrients produced on the farm are recycled back to the soil. Cover crops and composted manure are used to maintain soil organic matter and fertility. On organic farms, biological, cultural, and mechanical methods are used to control weeds, pests, and diseases.</p>
     <p>Organic farming can be closely related to tree plantation when integrated in an agroforestry system. This method combines agriculture and forestry technologies to create more productive and sustainable land-use systems. Trees can provide shade, improve soil structure and fertility, and contribute to water conservation, all of which are beneficial for organic farming practices.</p>
@@ -270,3 +340,4 @@
 </script>
 </body>
 </html>
+
