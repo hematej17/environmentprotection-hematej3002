@@ -145,6 +145,97 @@
             width: 400px; /* Adjust as needed */
             height: 500px;
         }
+        @media (max-width: 601px) {
+            .carousel-images img {
+                width: 100%;
+                height: auto;
+            }
+            .image-right {
+                float: none;
+                display: block;
+                margin: 20px auto;
+                width: 80%;
+                height: auto;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+            .container img[src="air57.jpg"] {
+                height: 240px;
+                width: 370px;
+            }
+            .container img[src="air300.jpg"] {
+                height: 280px;
+                width: 400px;
+            }
+            .container img[src="air600.png"] {
+                height: 320px;
+                width: 280px;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1023px) {
+            .carousel-images img {
+                width: 450px;
+                height: 350px;
+            }
+            .image-right {
+                float: right;
+                margin-left: 40px;
+                width: 400px;
+                height: 500px;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+            .container img[src="air57.jpg"] {
+                height: 300px;
+                width: 450px;
+            }
+            .container img[src="air300.jpg"] {
+                height: 320px;
+                width: 480px;
+            }
+            .container img[src="air600.png"] {
+                height: 450px;
+                width: 350px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .carousel-images img {
+                width: 500px;
+                height: 350px;
+            }
+            .image-right {
+                float: right;
+                margin-left: 80px;
+                width: 400px;
+                height: 500px;
+            }
+            .container img[src="air57.jpg"] {
+                height: 350px;
+                width: 500px;
+            }
+            .container img[src="air300.jpg"] {
+                height: 350px;
+                width: 550px;
+            }
+            .container img[src="air600.png"] {
+                height: 500px;
+                width: 400px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -166,7 +257,7 @@
     <div class="container">
         <h2>Introduction to Air Quality Management</h2>
         <div style="text-align:center;">
-            <img src="air57.jpg" alt="Air Quality Management" style="height:350px;width:500px">
+            <img src="air57.jpg" alt="Air Quality Management">
         </div>
         <p>Air quality management refers to the process of monitoring, assessing, and taking steps to improve the air quality in a given area. It involves understanding the sources of air pollution, measuring pollutant levels, and implementing strategies to reduce harmful emissions and their impact on human health and the environment.</p>
         
@@ -176,7 +267,7 @@
         
         <h2>Impact of Air Pollution</h2>
         <div style="text-align:center;">
-            <img src="air300.jpg" alt="Air Quality Management" style="height:350px;width:550px">
+            <img src="air300.jpg">
         </div>
         <ul>
             <li><strong>Health Problems:</strong> Air pollution can cause respiratory diseases, cardiovascular diseases, and can exacerbate asthma and other respiratory conditions.</li>
@@ -186,8 +277,8 @@
             <li><strong>Agricultural Impact:</strong> Pollutants like ozone can damage crops, reducing agricultural productivity and food security.</li>
             <li><strong>Economic Costs:</strong> The health impacts, environmental degradation, and loss in agricultural productivity due to air pollution result in significant economic costs.</li>
         </ul>
-        <img src="air600.png" alt="Air Quality" class="image-right">
         <h2>Tips and Techniques to Reduce Air Pollution</h2>
+        <img src="air600.png" alt="Air Quality" class="image-right">
         <p>Individuals can play a significant role in reducing air pollution by adopting the following practices:</p>
         <ul>
             <li>Use public transportation, carpool, bike, or walk instead of driving alone.</li>
@@ -273,3 +364,4 @@
     </script>
 </body>
 </html>
+
