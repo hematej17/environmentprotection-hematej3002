@@ -43,6 +43,8 @@
             padding: 1rem;
             text-decoration: none;
             text-transform: uppercase;
+            box-sizing: border-box;
+            text-align: center; /* Center the text */
         }
         .container {
             padding: 2rem;
@@ -61,38 +63,28 @@
             margin-bottom: 2rem;
             font-size: 1.2rem;
         }
-        .content-section:nth-child(odd) img {
-            order: 1;
-            margin-right: 2rem;
+        .image-wrapper {
+            float: left; /* Float the image to the left */
+            margin-right: 30px; /* Adjust margin to create space between image and text */
         }
-        .content-section:nth-child(odd) div {
-            order: 2;
+        .image-wrapper1 {
+            float: right; /* Float the image to the right */
+            margin-left: 30px; /* Adjust margin to create space between image and text */
         }
-        .content-section:nth-child(even) img {
-            order: 2;
-            margin-left: 2rem;
+        .clear {
+            clear: both; /* Clear floats after the image to prevent subsequent content from wrapping */
         }
-        .content-section:nth-child(even) div {
-            order: 1;
+        p {
+            line-height: 1.6; /* Adjust line height for readability */
+        /* Space between paragraphs */
         }
-        .content-section img {
-            width: 550px;
-            height: 350px;
-        }
-        .content-section div {
-            flex: 1;
-        }
-        .content-section h2 {
+        h2 {
             margin-top: 0;
             font-size: 2.5rem;
             color: #333;
             border-bottom: 1px solid #ddd;
             padding-bottom: 0.5rem;
-        }
-        .content-section p {
-            font-size: 1.2rem;
-            color: #333; /* Set to light black */
-            line-height: 1.6;
+            text-align: center; /* Center the headings */
         }
         footer {
             background-color: #333;
@@ -102,6 +94,69 @@
             position: relative; /* Changed from fixed to relative */
             width: 100%;
         }
+        .center-image {
+            text-align: center;
+            margin-bottom: 2rem; /* Add some space below the image */
+        }
+        .center-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Media Queries for Mobile */
+        @media (max-width: 601px) {
+            .image-wrapper, .image-wrapper1 {
+                float: none; /* Remove floating */
+                margin: 0 auto; /* Center the image */
+                display: block;
+                text-align: center; /* Center the image */
+            }
+            .image-wrapper1 img {
+                width: 100%; /* Make image full width */
+                height: auto;
+            }
+            .image-wrapper img {
+                width: 90%; /* Make image full width */
+                height: auto;
+            }
+            .content-section {
+                display: block; /* Stack text below the image */
+                text-align: center; /* Center the text */
+            }
+            .content-section p {
+                margin-top: 1rem; /* Add space between image and text */
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        /* Media Queries for Laptops */
+        @media (min-width: 1024px) {
+            .center-image img {
+                width: 600px; /* Set width for protection10.jpg */
+                height: 330px; /* Set height for protection10.jpg */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1023px) {
+                .center-image img {
+                width: 500px; /* Set width for protection10.jpg */
+                height: 300px; /* Set height for protection10.jpg */
+                }
+                nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+            }
     </style>
 </head>
 <body>
@@ -122,8 +177,8 @@
     </nav>
     <div class="container">
         <h1>Welcome to Our Environment Protection Initiative</h1>
-        <div style="text-align:center;">
-            <img src="protection10.jpg" alt="Environment Protection" style="height:400px;width:600px">
+        <div class="center-image">
+            <img src="protection10.jpg" alt="Environment Protection">
         </div>
         <ul>
             <li><p>Our mission is to raise awareness about environmental issues and promote sustainable practices to protect our planet.</p></li>
@@ -132,61 +187,59 @@
             <li><p><strong>Environment Day:</strong> World Environment Day, celebrated on June 5th each year, is a global event to encourage awareness and action for the protection of our environment. It serves as a reminder of our responsibility to safeguard our natural surroundings.</p></li>
             <li><p>We aim to raise awareness among people about the measures we should take to protect the environment. Some of the topics we focus on are:</p></li>
         </ul>
-        <div class="content-section">
-            <img src="Zero-Waste.jpg" alt="Waste Management Image">
-            <div>
-                <h2>Waste Management</h2>
-                <p>Waste management is the process of handling, collecting, and disposing of waste materials in a safe and efficient manner. It includes activities like recycling, composting, and proper disposal to minimize the amount of waste that ends up in landfills. Recycling allows materials like paper, glass, and plastics to be reused, reducing the need for raw materials and saving energy. Composting organic waste, such as food scraps and yard trimmings, creates nutrient-rich soil for gardens. Proper hazardous waste disposal prevents harmful chemicals from polluting soil and water. Waste-to-energy technologies convert waste into energy, reducing reliance on fossil fuels. Public awareness and education play a crucial role in promoting responsible waste management practices. Governments and businesses develop waste management plans to meet environmental regulations and sustainability goals. By practicing effective waste management, we conserve resources, protect the environment, and create a cleaner and healthier world for future generations.</p>
-                <ul>
-                    <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
-                    <li><a href="wastemanagement.html">Waste Management</a></li>
-                </ul>
-            </div>
+        <h2>Waste Management</h2>
+        <div class="image-wrapper1">
+            <img src="Zero-Waste.jpg" alt="Waste Management Image" width="500" height="350">
         </div>
-        <div class="content-section">
-            <div>
-                <h2>Water Conservation</h2>
-                <p>Water conservation is about using water wisely and not wasting it. Simple actions like fixing leaks, taking shorter showers, and turning off the tap while brushing your teeth can save a lot of water. Using water-saving appliances, like low-flow toilets and showerheads, helps too. Collecting rainwater for garden use and planting drought-resistant plants are great ways to conserve water. Farmers can use drip irrigation to water crops more efficiently. Industries can also find ways to use less water in their processes. Protecting our rivers, lakes, and oceans from pollution is crucial for having clean water. Teaching people about these practices can make a big difference. Every little bit helps to ensure we have enough water now and in the future. Let's all do our part to save water!</p>
-                <ul>
-                    <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
-                    <li><a href="waterconservation.html">Water Conservation</a></li>
-                </ul>
-            </div>
-            <img src="water.jpg" alt="Water Conservation">
+        <p>Waste management is the process of handling, collecting, and disposing of waste materials in a safe and efficient manner. It includes activities like recycling, composting, and proper disposal to minimize the amount of waste that ends up in landfills. Recycling allows materials like paper, glass, and plastics to be reused, reducing the need for raw materials and saving energy. Composting organic waste, such as food scraps and yard trimmings, creates nutrient-rich soil for gardens. Proper hazardous waste disposal prevents harmful chemicals from polluting soil and water. Waste-to-energy technologies convert waste into energy, reducing reliance on fossil fuels. Public awareness and education play a crucial role in promoting responsible waste management practices. Governments and businesses develop waste management plans to meet environmental regulations and sustainability goals. By practicing effective waste management, we conserve resources, protect the environment, and create a cleaner and healthier world for future generations.</p>
+        <ul>
+            <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
+            <li><a href="wastemanagement.html">Waste Management</a></li>
+        </ul>
+        <h2>Water Conservation</h2>
+        <div class="image-wrapper">
+            <img src="water.jpg" alt="Water Conservation" width="500" height="350">
         </div>
-        <div class="content-section">
-            <img src="tree800.jpg" alt="Tree Plantation">
-            <div>
-                <h2>Tree Plantation</h2>
-                <p>Tree planting is important for a healthy environment. Trees clean the air by absorbing pollutants and releasing oxygen. They provide homes for wildlife and help cool our cities by providing shade. Planting trees can prevent soil erosion and protect against flooding. Trees also absorb carbon dioxide, helping to fight climate change. Fruit trees can provide food for people and animals. Community tree planting projects bring people together and beautify neighborhoods. Every tree planted makes a difference. By planting trees, we create a greener and healthier planet for future generations. Let's all take part in planting more trees!</p>
-                <ul>
-                    <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
-                    <li><a href="treeplantation.html">Tree Plantation</a></li>
-                </ul>
-            </div>
+        <div>
+            <p>Water conservation is about using water wisely and not wasting it. Simple actions like fixing leaks, taking shorter showers, and turning off the tap while brushing your teeth can save a lot of water. Using water-saving appliances, like low-flow toilets and showerheads, helps too. Collecting rainwater for garden use and planting drought-resistant plants are great ways to conserve water. Farmers can use drip irrigation to water crops more efficiently. Industries can also find ways to use less water in their processes. Protecting our rivers, lakes, and oceans from pollution is crucial for having clean water. Teaching people about these practices can make a big difference. Every little bit helps to ensure we have enough water now and in the future. Let's all do our part to save water!</p>
+            <ul>
+                <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
+                <li><a href="waterconservation.html">Water Conservation</a></li>
+            </ul>
         </div>
-        <div class="content-section">
+        <h2>Tree Plantation</h2>
+        <div class="image-wrapper1">
+            <img src="tree800.jpg" alt="Tree Plantation" width="500" height="350">
+        </div>
+        <div>
+            <p>Tree planting is important for a healthy environment. Trees clean the air by absorbing pollutants and releasing oxygen. They provide homes for wildlife and help cool our cities by providing shade. Planting trees can prevent soil erosion and protect against flooding. Trees also absorb carbon dioxide, helping to fight climate change. Fruit trees can provide food for people and animals. Community tree planting projects bring people together and beautify neighborhoods. Every tree planted makes a difference. By planting trees, we create a greener and healthier planet for future generations. Let's all take part in planting and caring for trees in our communities!</p>
+            <ul>
+                <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
+                <li><a href="treeplantation.html">Tree Plantation</a></li>
+            </ul>
+        </div>
+        <h2>Air Quality Management</h2>
+        <div class="image-wrapper">
+            <img src="air.jpg" alt="Air Quality Management" width="500" height="350">
+        </div>
             <div>
-                <h2>Air Quality Management</h2>
                 <p>Air quality management is about keeping the air we breathe clean and safe. It involves reducing pollution from cars, factories, and other sources. Using public transportation, biking, or walking can help lower air pollution. Factories can use filters and cleaner technologies to reduce emissions. Planting more trees also helps clean the air. Governments set air quality standards to protect public health. Regularly checking air quality and issuing warnings on bad air days keeps people informed. Encouraging renewable energy sources, like solar and wind, reduces reliance on polluting fossil fuels. Educating the public about actions they can take to improve air quality is key. Together, we can make the air cleaner and healthier for everyone.</p>
                 <ul>
                     <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
                     <li><a href="airqualitymanagement.html">Air Quality Management</a></li>
                 </ul>
             </div>
-            <img src="air.jpg" alt="Air Quality Management">
-        </div>
-        <div class="content-section">
-            <img src="1646657817image 1.jpg" alt="Wildlife Conservation">
+            <h2>Wildlife Conservation</h2>
+        <div class="image-wrapper1">
+            <img src="1646657817image 1.jpg" alt="Wildlife Conservation" width="500" height="350">
+            </div>
             <div>
-                <h2>Wildlife Conservation</h2>
                 <p>Wildlife conservation is about protecting animals and their natural habitats. It involves creating and maintaining protected areas like national parks and wildlife reserves. Preventing poaching and illegal hunting is crucial to saving endangered species. Supporting sustainable practices helps ensure that wildlife have the resources they need to survive. Educating people about the importance of biodiversity and the role animals play in ecosystems is essential. Conserving forests, wetlands, and oceans helps protect the homes of many species. Promoting coexistence between humans and wildlife reduces conflicts. By supporting conservation efforts, we help preserve the planet's biodiversity for future generations.</p>
                 <ul>
-                    <li><p>NOTE: For more detailed information, please click on Link given below.</p></li>
+                    <li><p>NOTE: For more detailed information, please click on the Link given below.</p></li>
                     <li><a href="wildlifeprotection.html">Wildlife Conservation</a></li>
                 </ul>
             </div>
-        </div>
     </div>
     <footer>
         &copy; 2024 Environment Protection Initiative. All rights reserved.
@@ -195,3 +248,4 @@
     </footer>
 </body>
 </html>
+
