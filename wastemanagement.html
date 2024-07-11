@@ -49,20 +49,24 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
         .container h2 {
-            font-size: 2.2rem; /* Increased size of h2 */
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
         .container h3 {
-            font-size: 1.8rem; /* Increased size of h3 */
+            font-size: 1.8rem;
             margin-top: 1.5rem;
             margin-bottom: 1rem;
         }
         .container p {
-            font-size: 1.2rem; /* Increased size of paragraphs */
+            font-size: 1.2rem;
             line-height: 1.6;
         }
         .container ul {
-            font-size: 1.2rem; /* Increased size of list items */
+            font-size: 1.2rem;
+        }
+        .container img {
+            width: 90%;
+            height: auto;
         }
         footer {
             background-color: #333;
@@ -72,22 +76,20 @@
             position: relative;
             width: 100%;
         }
-        /* Carousel Styles */
         .carousel {
             position: relative;
             max-width: 500px;
             margin: auto;
-            overflow: hidden; /* Ensure only one image is visible */
+            overflow: hidden;
         }
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
-            width: 100%; /* Set width to 100% */
         }
         .carousel-images img {
-            min-width: 100%; /* Ensure each image takes up the full width */
-            width: 500px; /* Fixed width */
-            height: 350px; /* Fixed height */
+            min-width: 100%;
+            max-width: 500px;
+            height: auto;
         }
         .prev, .next {
             cursor: pointer;
@@ -98,7 +100,7 @@
             font-weight: bold;
             font-size: 18px;
             user-select: none;
-            background-color: rgba(0, 0, 0, 0.5); /* Background color for visibility */
+            background-color: rgba(0, 0, 0, 0.5);
         }
         .next {
             right: 0;
@@ -125,6 +127,87 @@
         .active, .carousel-indicators span:hover {
             background-color: #717171;
         }
+
+        /* Responsive Design */
+        @media (max-width: 601px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .batch-info {
+                bottom: 5px;
+                right: 20px;
+                font-size: 1rem;
+                text-align: center;
+                position: static;
+                margin-top: 1rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1023px) {
+            .container img.reduce300 {
+                height: 350px;
+                width: 380px;
+            }
+            .container img.maxresdefault {
+                height: 260px;
+                width: 450px;
+            }
+            .container img.manage405 {
+                height: 320px;
+                width: 350px;
+            }
+            .container img.ecofriendly305 {
+                height: 280px;
+                width: 500px;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px;
+            }
+            nav a {
+                width: auto;
+                float: none;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container img.reduce300 {
+                height: 400px;
+                width: 450px;
+            }
+            .container img.maxresdefault {
+                height: 350px;
+                width: 620px;
+            }
+            .container img.manage405 {
+                height: 350px;
+                width: 400px;
+            }
+            .container img.ecofriendly305 {
+                height: 330px;
+                width: 600px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -145,12 +228,12 @@
     <div class="container">
         <h2>Effective Waste Management Practices</h2>
         <div style="text-align:center;">
-            <img src="manage405.jpg" alt="Environment Protection" style="height:350px;width:400px">
+            <img src="manage405.jpg" alt="Environment Protection" class="manage405">
         </div>
         <p>Waste management is essential for maintaining a clean and healthy environment. It involves the collection, transport, processing, recycling, and disposal of waste materials. Effective waste management helps to reduce the impact of waste on the environment, human health, and wildlife.</p>
         <h3>Types of Waste</h3>
         <div style="text-align:center;">
-            <img src="maxresdefault.jpg" alt="Environment Protection" style="height:350px;width:600px">
+            <img src="maxresdefault.jpg" alt="Environment Protection" class="maxresdefault">
         </div>
         <ul>
             <li><strong>Household Waste:</strong> Includes everyday items like food scraps, paper, and packaging.</li>
@@ -160,7 +243,7 @@
         </ul>
         <h3>Waste Management Techniques</h3>
         <div style="text-align:center;">
-            <img src="reduce300.jpg" alt="Environment Protection" style="height:400px;width:450px">
+            <img src="reduce300.jpg" alt="Environment Protection" class="reduce300">
         </div>
         <ul>
             <li><strong>Reduce:</strong> Minimize the amount of waste produced by using less and opting for reusable products.</li>
@@ -180,7 +263,7 @@
         </ul>
         <h3>How You Can Help</h3>
         <div style="text-align:center;">
-            <img src="ecofriendly305.jpg" alt="Environment Protection" style="height:350px;width:650px">
+            <img src="ecofriendly305.jpg" alt="Environment Protection" class="ecofriendly305">
         </div>
         <ul>
             <li>Reduce your waste by buying products with minimal packaging.</li>
@@ -252,3 +335,4 @@
     </script>
 </body>
 </html>
+
